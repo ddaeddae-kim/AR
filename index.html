@@ -24,23 +24,29 @@
                     src="assets/asset.gltf"
                 ></a-asset-item>
             </a-assets>
+            <a-assets>
+                <a-asset-item
+                    id="uTurn"
+                    src="assets/U-Turn.gltf"
+                ></a-asset-item>
+            </a-assets>
 
             <a-marker
                 id="animated-marker"
                 type="pattern"
                 preset="custom"
                 url="assets/marker.patt"
-                raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerA"
             >
                 <a-entity
                     id="bowser-model"
-                    scale="15.27422596034751 15.27422596034751 15.27422596034751"
+                    rotation = "0 45 0"
+                    scale="30 30 30"
                     animation-mixer="loop: repeat"
                     gltf-model="#animated-asset"
-                    class="clickable"
+                    
                     gesture-handler
                 ></a-entity>
             </a-marker>
@@ -49,7 +55,6 @@
                 type="pattern"
                 preset="custom"
                 url="assets/marker2.patt"
-                raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerB"
@@ -59,7 +64,7 @@
                     scale="15.27422596034751 15.27422596034751 15.27422596034751"
                     animation-mixer="loop: repeat"
                     gltf-model="#animated-asset"
-                    class="clickable"
+                    
                     gesture-handler
                 ></a-entity>
             </a-marker>
@@ -68,7 +73,6 @@
                 type="pattern"
                 preset="custom"
                 url="assets/marker3.patt"
-                raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerC"
@@ -76,9 +80,10 @@
                 <a-entity
                     id="bowser-model"
                     scale="15.27422596034751 15.27422596034751 15.27422596034751"
+                    rotation = "90 180 0"
                     animation-mixer="loop: repeat"
-                    gltf-model="#animated-asset"
-                    class="clickable"
+                    gltf-model="#uTurn"
+                    
                     gesture-handler
                 ></a-entity>
             </a-marker>
@@ -87,17 +92,17 @@
                 type="pattern"
                 preset="custom"
                 url="assets/marker4.patt"
-                raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerD"
             >
                 <a-entity
                     id="bowser-model"
+                    rotation ="0 0 180"
                     scale="15.27422596034751 15.27422596034751 15.27422596034751"
                     animation-mixer="loop: repeat"
                     gltf-model="#animated-asset"
-                    class="clickable"
+                    
                     gesture-handler
                 ></a-entity>
             </a-marker>
